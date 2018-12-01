@@ -1,0 +1,31 @@
+<form (submit)="reg()" class="form">
+  <div id="a">Hee2nu's Beauty Home</div>
+  <div id="b">Register Here!!!</div>
+  <table>
+    <tr>
+      <td>Surname: </td><td><input type="text" name="sn" placeholder="Surname" [(ngModel)]="student.sn"></td>
+    </tr>
+    <tr>
+        <td>Firstname: </td><td><input type="text" name="fn" placeholder="FIrstname" [(ngModel)]="student.fn"></td>
+    </tr>
+    <tr>
+        <td>Username: </td><td><input type="text" name="un" placeholder="Username" [(ngModel)]="student.un"></td>
+    </tr>
+    <tr>
+        <td>New Password: </td><td><input type="password" name="up" placeholder="Password" [(ngModel)]="student.up"></td>
+    </tr>
+    <tr>
+        <td>Date Of Birth: </td><td><input type="date" name="ua" [(ngModel)]="student.ua"></td>
+    </tr>
+    <tr>
+        <td>Mobile No: </td><td><input type="text" name="um" placeholder="Mobile" [(ngModel)]="student.um"></td>
+      </tr>
+   <tr>
+        <td>Department: </td><td><input type="text" name="ud" placeholder="Department" [(ngModel)]="student.ud"></td>
+    </tr>
+    <tr>
+        <td>Email: </td><td><input type="email" name="ue" placeholder="Email" [(ngModel)]="student.ue"></td>
+    </tr>
+    <tr><td colspan="2"><button type="submit">Sign Up</button></td></tr>
+  </table>
+</form>

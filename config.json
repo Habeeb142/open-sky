@@ -1,0 +1,7 @@
+{
+    "/sch_portal_ang": {
+        "target": "http://localhost:80",
+        "secure": false,
+        "changeOrigin": true
+    }
+}
