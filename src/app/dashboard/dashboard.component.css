@@ -1,0 +1,26 @@
+div.polaroid {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    text-align: center;
+    background-color: grey;
+    cursor: pointer;
+    margin: 3px;
+  }
+div.polaroid:hover {
+    opacity: .8;
+  }
+  
+  div.container {
+    padding: 4px;
+  }
+
+  img {
+      border-radius: 10px;
+      height: 220px;
+  }
+  p {
+      font-weight: bold;
+  }
+
+  label {
+      font-size: 14px;
+  }

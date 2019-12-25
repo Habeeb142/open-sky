@@ -1,1 +1,22 @@
 /* You can add global styles to this file, and also import other style files */
+body {
+    background: url('https://www.iflya380.com/content/dam/channel-specific/websites/iflya380/content-hub/Frankfurt-Airport-A380-runway.jpg');
+    background-size: cover;
+}
+
+/* scrollbar */
+body::-webkit-scrollbar {
+    width: .4em;
+    height: .3em
+}
+
+body::-webkit-scrollbar-thumb {
+    background-color: grey
+}
+body::-webkit-scrollbar-thumb:hover {
+    background-color: #ff6c00
+}
+
+body::-webkit-scrollbar-corner {
+    border: 1px solid blue
+}

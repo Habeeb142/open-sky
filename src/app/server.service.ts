@@ -5,10 +5,17 @@ import { HttpClient } from '@angular/common/http';
   providedIn: 'root'
 })
 export class ServerService {
-
   constructor(private http: HttpClient) { }
 
-  studentInfo(detail) {
-    return this.http.post("/sch_portal_ang/reg.php", detail);
+  check(x,y,z) {
+    if(x.icao!=null){
+      return this.http.get(`https://opensky-network.org/api/flights/aircraft?icao24=${x.icao}begin=${y}&end=${z}`);
+    }
+
+    else {
+      return this.http.get(`https://opensky-network.org/api/flights/all?begin=${y}&end=${z}`);
+    }
   }
+
+
 }

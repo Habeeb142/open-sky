@@ -1,0 +1,163 @@
+<div class="row offset-md-2">
+  <div class="polaroid col-12 col-md-3 p-3 mt-2" (click)="modal('atlanta')">
+    <img src="https://cdn.vox-cdn.com/thumbor/ylgOppGoUWzRHY4yYA0REPR8-gw=/0x0:5616x3744/1200x800/filters:focal(2359x1423:3257x2321)/cdn.vox-cdn.com/uploads/chorus_image/image/63223988/GettyImages_595284480.0.jpg" alt="airport" style="width:100%">
+    <div class="container">
+      <p>Atlanta, United States</p>
+    </div>
+  </div>
+
+  <div class="polaroid col-12 col-md-3 p-3 mt-2" (click)="modal('new_york')">
+    <img src="https://www.webuildvalue.com/static/upload/jfk/jfk-reconstruction.jpg" alt="airport" style="width:100%">
+    <div class="container">
+      <p>New York LGA, United States</p>
+    </div>
+  </div>
+
+  <div class="polaroid col-12 col-md-3 p-3 mt-2" (click)="modal('amsterdam')">
+    <img src="https://static01.nyt.com/images/2019/11/06/world/06dutch2/merlin_163965465_1fb6c4f1-2491-4cec-a969-7b51c01e60a4-articleLarge.jpg?quality=75&auto=webp&disable=upscale" alt="airport" style="width:100%">
+    <div class="container">
+      <p>Amsterdam, Netherlands</p>
+    </div>
+  </div>
+</div>
+
+<div class="row offset-md-2">
+  <div class="polaroid col-12 col-md-3 p-3 mt-2" (click)="modal('london')">
+    <img src="https://www.airport-suppliers.com/wp-content/uploads/2017/09/Schipol-airport-news-.jpg" alt="airport" style="width:100%">
+    <div class="container">
+      <p>London, United Kingdom</p>
+    </div>
+  </div>
+
+  <div class="polaroid col-12 col-md-3 p-3 mt-2" (click)="modal('tokyo')">
+    <img src="https://media.timeout.com/images/102935442/630/472/image.jpg" alt="airport" style="width:100%">
+    <div class="container">
+      <p>Tokyo, Japan</p>
+    </div>
+  </div>
+
+  <div class="polaroid col-12 col-md-3 p-3 mt-2" (click)="modal('paris')">
+    <img src="https://www.iflya380.com/content/iflya380/en/fly-smart/five-fun-facts-about-narita-international-airport-Tokyo-NRT/_jcr_content/article-info/par-articles/image1.img.jpg/1553003198313.jpg" alt="airport" style="width:100%">
+    <div class="container">
+      <p>Paris, France</p>
+    </div>
+  </div>
+</div>
+
+<div class="row offset-md-2" (click)="modal('chicago')">
+  <div class="polaroid col-12 col-md-3 p-3 mt-2">
+    <img src="https://upgradedpoints.com/wp-content/uploads/2019/05/Chicago-O-Hare-International-Airport-1.jpg" alt="airport" style="width:100%">
+    <div class="container">
+      <p>Chicago, United States</p>
+    </div>
+  </div>
+
+  <div class="polaroid col-12 col-md-3 p-3 mt-2" (click)="modal('beijing')">
+    <img src="https://s.abcnews.com/images/US/ohare-expansion-ap-file-jef-180228_3x2_992.jpg" alt="airport" style="width:100%">
+    <div class="container">
+      <p>Beijing, China</p>
+    </div>
+  </div>
+  <div class="polaroid col-12 col-md-3 p-3 mt-2" (click)="modal('miami')">
+    <img src="http://www.atl.com/wp-content/uploads/2018/10/ATLNext-North-complete-copy-500x500.png" alt="airport" style="width:100%">
+    <div class="container">
+      <p>Miami, United States</p>
+    </div>
+  </div>
+</div>
+
+<div class="row offset-md-2">
+  <div class="polaroid col-12 col-md-3 p-3 mt-2" (click)="modal('dubai')">
+    <img src="https://304ljw4amcep3ali496xph6b-wpengine.netdna-ssl.com/wp-content/uploads/2019/05/Hartsfield-Jackson-Atlanta-International-Airport-Aerial-Night-1900-1600x1069.jpg" alt="airport" style="width:100%">
+    <div class="container">
+      <p>Dubai, United Arab Emirates</p>
+    </div>
+  </div>
+  <div class="polaroid col-12 col-md-3 p-3 mt-2" (click)="logout()">
+    <img src="https://previews.123rf.com/images/sarahdesign/sarahdesign1506/sarahdesign150606040/41566967-logout-button.jpg" alt="airport" style="width:100%">
+    <div class="container">
+      <p>Logout</p>
+    </div>
+  </div>
+</div>
+
+<!-- modal -->
+<div class="modal fade" id="modal" tabindex="-1" role="dialog" aria-labelledby="modal" aria-hidden="true">
+  <form class="modal-dialog" role="document" (submit)='submit()'>
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLongTitle">{{place}}</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="alert {{warn}}" style="font-size: 14px;">{{err}}</div>
+      <div class="modal-body">
+        <div class="row">
+        <div class="form-group col-5">
+          <label for="" class="control-label">Flight Departing Minute:</label>
+          <select class="form-control" name="depart_minute" [(ngModel)]="data.depart_minute" [ngModelOptions]="{standalone: true}" >
+            <option>Minutes</option><option value="1">01</option><option value="2">02</option><option value="3">03</option>
+            <option value="4">04</option><option value="5">05</option><option value="6">06</option><option value="7">07</option><option value="8">08</option>
+            <option value="9">09</option><option value="10">10</option><option value="11">11</option><option value="12">12</option><option value="13">13</option>
+            <option value="14">14</option><option value="15">15</option><option value="16">16</option><option value="17">17</option><option value="18">18</option>
+            <option value="19">19</option><option value="20">20</option><option value="21">21</option><option value="22">22</option><option value="23">23</option><option value="24">24</option>
+            <option value="25">25</option><option value="26">26</option><option value="27">27</option><option value="28">28</option><option value="29">29</option><option value="30">30</option>
+            <option value="31">31</option><option value="32">32</option><option value="33">33</option><option value="34">34</option><option value="35">35</option><option value="36">36</option>
+            <option value="37">37</option><option value="38">38</option><option value="39">39</option><option value="40">40</option><option value="41">41</option><option value="42">42</option>
+            <option value="43">43</option><option value="44">44</option><option value="45">45</option><option value="46">46</option><option value="47">47</option><option value="48">48</option>
+            <option value="49">49</option><option value="50">50</option><option value="51">51</option><option value="52">52</option><option value="53">53</option><option value="54">54</option><option value="55">55</option>
+            <option value="56">56</option><option value="57">57</option><option value="58">58</option><option value="59">59</option>
+          </select>
+        </div>
+        <div class="col-1 font-weight-bold">OR</div>
+        <div class="form-group col-5">
+          <label for="" class="control-label">Flight Departing Minute: <span class="text-danger">*</span></label>
+          <input type="text" name="depart_minute" required [(ngModel)]="data.depart_minute" [ngModelOptions]="{standalone: true}" class="form-control">
+        </div>
+        <div class="form-group col-5">
+          <label for="" class="control-label">Flight Arriving Minute:</label>
+          <select class="form-control" name="arrive_minute" [(ngModel)]="data.arrive_minute" [ngModelOptions]="{standalone: true}" >
+            <option>Minutes</option><option value="1">01</option><option value="2">02</option><option value="3">03</option>
+            <option value="4">04</option><option value="5">05</option><option value="6">06</option><option value="7">07</option><option value="8">08</option>
+            <option value="9">09</option><option value="10">10</option><option value="11">11</option><option value="12">12</option><option value="13">13</option>
+            <option value="14">14</option><option value="15">15</option><option value="16">16</option><option value="17">17</option><option value="18">18</option>
+            <option value="19">19</option><option value="20">20</option><option value="21">21</option><option value="22">22</option><option value="23">23</option><option value="24">24</option>
+            <option value="25">25</option><option value="26">26</option><option value="27">27</option><option value="28">28</option><option value="29">29</option><option value="30">30</option>
+            <option value="31">31</option><option value="32">32</option><option value="33">33</option><option value="34">34</option><option value="35">35</option><option value="36">36</option>
+            <option value="37">37</option><option value="38">38</option><option value="39">39</option><option value="40">40</option><option value="41">41</option><option value="42">42</option>
+            <option value="43">43</option><option value="44">44</option><option value="45">45</option><option value="46">46</option><option value="47">47</option><option value="48">48</option>
+            <option value="49">49</option><option value="50">50</option><option value="51">51</option><option value="52">52</option><option value="53">53</option><option value="54">54</option><option value="55">55</option>
+            <option value="56">56</option><option value="57">57</option><option value="58">58</option><option value="59">59</option>
+          </select>
+        </div>
+        <div class="col-1 font-weight-bold">OR</div>
+        <div class="form-group col-5">
+          <label for="" class="control-label">Flight Arriving Minute: <span class="text-danger">*</span></label>
+          <input type="text" name="arrive_minute" required [(ngModel)]="data.arrive_minute" [ngModelOptions]="{standalone: true}" class="form-control">
+        </div>
+        <div class="form-group col-6">
+          <label for="" class="control-label">ICAO no.:</label>
+          <input type="text" name="icao" [(ngModel)]="data.icao" [ngModelOptions]="{standalone: true}" class="form-control">
+        </div>
+        <div class="form-group col-6">
+          <label for="" class="control-label">Logo:</label>
+          <input type="text" name="logo" readonly [(ngModel)]="data.logo" [ngModelOptions]="{standalone: true}" class="form-control">
+        </div>
+        <div class="form-group col-6">
+          <label for="" class="control-label">Airline:</label>
+          <input type="text" name="airline" [(ngModel)]="data.airline" readonly [ngModelOptions]="{standalone: true}" class="form-control">
+        </div>
+
+      </div>
+
+    </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        <button type="submit" class="btn btn-primary">Search</button>
+      </div>
+    </div>
+  </form>
+</div>
+
+

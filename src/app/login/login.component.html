@@ -1,0 +1,22 @@
+<!-- Login Section -->
+<div class="card content col-sm-8 col-md-4 offset-md-1 mt-4 animated bounceInUp">
+  <div class="card-header text-center">
+    Login
+  </div>
+  <div class="card-body">
+      <div class="alert text-center font-weight-bold {{warning}}" style="font-size: 14px;">{{ err }}</div>
+          <form  (submit)="user_login()" class="form acc" autocomplete="off">
+              <div class="form-group">
+                <label for="username" class="control-label username">Username:</label>
+                <input type="username" class="form-control" placeholder="enter username" [(ngModel)]="user.username" [ngModelOptions]="{standalone: true}" (click)='resize(1)'>
+              </div>
+              <div class="form-group">
+                <label for="password" class="control-label password">Password:</label>
+                <input type="password" class="form-control" placeholder="password" [(ngModel)]="user.password" [ngModelOptions]="{standalone: true}" (click)='resize(2)'>
+              </div>
+              <input type="submit" class="btn col-4 offset-4" value="Login">
+          </form>
+   </div>
+</div>
+
+
